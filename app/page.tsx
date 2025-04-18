@@ -90,8 +90,8 @@ export default function Home() {
               <Image
                 src="/header-image.png"
                 alt="Senior receiving tech support"
-                width={550}
-                height={550}
+                width={500}
+                height={500}
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
               />
             </div>
