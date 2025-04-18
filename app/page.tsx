@@ -88,7 +88,7 @@ export default function Home() {
                 </div>
               </div>
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="/header-image.png"
                 alt="Senior receiving tech support"
                 width={550}
                 height={550}
