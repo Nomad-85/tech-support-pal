@@ -92,7 +92,7 @@ export default function Home() {
                 alt="Senior receiving tech support"
                 width={550}
                 height={550}
-                className="object-contain p-1"
+                className="object-contain scale-90 rounded-xl"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm">How It Works</div>
+                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-lg">How It Works</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Simple Process, Expert Help</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   We make getting technology help easy and stress-free with our simple three-step process.
@@ -206,19 +206,19 @@ export default function Home() {
                   kind, and explained everything in a way I could understand. Now I can video chat with my
                   grandchildren!"
                 </blockquote>
-                <p className="font-medium">- Margaret W., 78</p>
+                <p className="font-medium">- Margaret W., 72</p>
                 <blockquote className="text-lg italic text-gray-500 border-l-4 pl-4 border-primary">
                   "After my wife passed away, I had no idea how to manage our online accounts. Tech Support Pal sorted
                   everything out and taught me how to handle it myself. Their service was invaluable."
                 </blockquote>
-                <p className="font-medium">- Robert T., 82</p>
+                <p className="font-medium">- Robert T., 76</p>
               </div>
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="/testimonial-pic.png?height=550&width=550"
                 alt="Happy senior client"
                 width={550}
                 height={550}
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                className="object-contain scale-75 rounded-xl"
               />
             </div>
           </div>
