@@ -11,7 +11,7 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/favicon.png"
+              src="/public/logo.png"
               alt="Tech Support Pal Logo"
               width={40}
               height={40}
