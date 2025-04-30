@@ -8,9 +8,9 @@ import { Footer } from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Tech Support Pal - In-Home Technology Support for Seniors",
+  title: "Tech Support Pal - In-Home Technology Support",
   description:
-    "Professional and friendly in-home technology support services for seniors and those less familiar with technology.",
+    "Professional and friendly in-home technology support services for everyone, regardless of technical experience.",
     generator: 'v0.dev'
 }
 

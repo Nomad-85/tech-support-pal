@@ -96,8 +96,8 @@ export default function ServicesPage() {
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h1>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a wide range of technology support services to help seniors and those less familiar with
-                  technology.
+                  We offer a wide range of technology support services to help everyone, regardless of their
+                  technical experience.
                 </p>
               </div>
             </div>

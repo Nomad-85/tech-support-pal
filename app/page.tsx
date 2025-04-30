@@ -14,7 +14,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  In-Home Technology Support for Seniors
+                  In-Home Technology Support for Everyone
                 </h1>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Friendly, patient technology help in the comfort of your own home. We specialize in making technology
@@ -162,7 +162,7 @@ export default function Home() {
               </div>
               <Image
                 src="/testimonial-pic.png?height=550&width=550"
-                alt="Happy senior client"
+                alt="Happy client"
                 width={550}
                 height={550}
                 className="object-contain scale-75 rounded-xl"

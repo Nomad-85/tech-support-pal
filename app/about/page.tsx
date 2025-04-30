@@ -16,7 +16,7 @@ export default function AboutPage() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Tech Support Pal</h1>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Tech Support Pal was founded with a simple mission: to make technology accessible and understandable
-                  for everyone, especially seniors and those who didn't grow up with computers and smartphones.
+                  for everyone, regardless of their technical background or experience.
                 </p>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   We understand that technology can be intimidating, but it doesn't have to be. Our patient, friendly
@@ -30,7 +30,7 @@ export default function AboutPage() {
               </div>
               <Image
                 src="/favicon.png"
-                alt="Tech support specialist helping senior client"
+                alt="Tech support specialist helping client"
                 width={550}
                 height={550}
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
@@ -102,7 +102,7 @@ export default function AboutPage() {
                 />
                 <div className="max-w-2xl">
                   <h3 className="text-2xl font-bold">Travis Roesner</h3>
-                  <p className="text-gray-500 text-lg">Founder & Senior Technician</p>
+                  <p className="text-gray-500 text-lg">Founder & Lead Technician</p>
                   <p className="mt-4 text-gray-500">
                     With over 30 years of experience in technology, Travis specializes in making technology accessible
                     to everyone. Travis has a gift for explaining complex concepts in simple terms.
