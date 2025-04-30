@@ -82,7 +82,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="/favicon.png"
                 alt="Tech support specialist helping senior client"
                 width={550}
                 height={550}
