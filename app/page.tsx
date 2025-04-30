@@ -11,7 +11,7 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/placeholder.svg?height=40&width=40"
+              src="/public/favicon.png?height=40&width=40"
               alt="Tech Support Pal Logo"
               width={40}
               height={40}
@@ -89,7 +89,7 @@ export default function Home() {
               </div>
               <Image
                 src="/header-image.png"
-                alt="Senior receiving tech support"
+                alt="Man helps woman with technology support"
                 width={550}
                 height={550}
                 className="object-contain scale-90 rounded-xl"
