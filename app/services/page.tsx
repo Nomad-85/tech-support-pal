@@ -93,7 +93,7 @@ export default function ServicesPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/placeholder.svg?height=40&width=40"
+              src="/favicon.png"
               alt="Tech Support Pal Logo"
               width={40}
               height={40}
@@ -165,7 +165,7 @@ export default function ServicesPage() {
                 <Card key={index} className="flex flex-col h-full">
                   <CardHeader>
                     <Image
-                      src={service.image || "/placeholder.svg"}
+                      src={service.image || "public/phone-transfer.png"}
                       alt={service.title}
                       width={300}
                       height={200}
