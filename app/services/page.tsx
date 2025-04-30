@@ -37,7 +37,7 @@ export default function ServicesPage() {
       title: "TV & Entertainment Systems",
       description:
         "We'll help you set up and configure your TV, sound system, and remotes. We can also help you understand how to use your entertainment system and troubleshoot any issues.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/soundbar.png",
       features: [
         "TV setup and configuration",
         "Remote control programming",
@@ -114,8 +114,8 @@ export default function ServicesPage() {
                       src={service.image}
                       alt={service.title}
                       width={300}
-                      height={200}
-                      className="w-full h-48 object-cover object-[center-top] rounded-t-lg"
+                      height={250}
+                      className="w-full h-64 object-cover object-[center-top] rounded-t-lg"
                     />
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <CardDescription>{service.description}</CardDescription>
