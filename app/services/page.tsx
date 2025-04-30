@@ -169,7 +169,7 @@ export default function ServicesPage() {
                       alt={service.title}
                       width={300}
                       height={200}
-                      className="rounded-lg object-cover w-full h-48 mb-4"
+                      className="w-full h-48 object-cover rounded-t-lg"
                     />
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <CardDescription>{service.description}</CardDescription>
