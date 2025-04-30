@@ -34,8 +34,8 @@ export default function ContactPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/public/favicon.png"
-              alt="TechHelp Logo"
+              src="/favicon.png"
+              alt="TechSupportPal Logo"
               width={40}
               height={40}
               className="rounded-md"
