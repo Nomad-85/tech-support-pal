@@ -11,7 +11,7 @@ export default function ServicesPage() {
       title: "Phone Setup & Transfers",
       description:
         "We'll help you set up your new smartphone or tablet and transfer all your contacts, photos, and apps from your old device. We can also help with email setup, app installation, and basic training.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/phone-transfer.png",
       features: [
         "New phone setup and configuration",
         "Data transfer from old devices",
@@ -24,7 +24,7 @@ export default function ServicesPage() {
       title: "Internet & Cable Setup",
       description:
         "Get help with your internet connection, WiFi setup, and cable or streaming services. We'll help you understand your bills, optimize your services, and ensure you're getting the best value.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/internet-cable.png",
       features: [
         "WiFi router setup and optimization",
         "Internet troubleshooting",
@@ -165,7 +165,7 @@ export default function ServicesPage() {
                 <Card key={index} className="flex flex-col h-full">
                   <CardHeader>
                     <Image
-                      src="/phone-transfer.png"
+                      src={service.image}
                       alt={service.title}
                       width={300}
                       height={200}
