@@ -11,7 +11,7 @@ export default function Home() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
-              src="/favicon.png?height=40&width=40"
+              src="/favicon.png"
               alt="Tech Support Pal Logo"
               width={40}
               height={40}
@@ -20,18 +20,10 @@ export default function Home() {
             <span className="text-xl font-bold">Tech Support Pal</span>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-lg font-medium hover:text-primary">
-              Home
-            </Link>
-            <Link href="/services" className="text-lg font-medium hover:text-primary">
-              Services
-            </Link>
-            <Link href="/about" className="text-lg font-medium hover:text-primary">
-              About
-            </Link>
-            <Link href="/contact" className="text-lg font-medium hover:text-primary">
-              Contact
-            </Link>
+            <Link href="/" className="text-lg font-medium hover:text-primary">Home</Link>
+            <Link href="/services" className="text-lg font-medium hover:text-primary">Services</Link>
+            <Link href="/about" className="text-lg font-medium hover:text-primary">About</Link>
+            <Link href="/contact" className="text-lg font-medium hover:text-primary">Contact</Link>
           </nav>
           <div className="flex items-center gap-4">
             <Link href="/contact">
