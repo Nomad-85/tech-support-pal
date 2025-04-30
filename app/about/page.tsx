@@ -3,13 +3,11 @@ import Image from "next/image"
 import { Calendar, Clock, MapPin } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
+    <div>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6">
@@ -133,7 +131,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }
