@@ -1,8 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle, ArrowRight } from "lucide-react"
+import { PhoneCall, Clock, CreditCard, CheckCircle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function ServicesPage() {
@@ -89,60 +91,7 @@ export default function ServicesPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full border-b bg-white">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/favicon.png"
-              alt="Tech Support Pal Logo"
-              width={40}
-              height={40}
-              className="rounded-md"
-            />
-            <span className="text-xl font-bold">Tech Support Pal</span>
-          </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="/" className="text-lg font-medium hover:text-primary">
-              Home
-            </Link>
-            <Link href="/services" className="text-lg font-medium text-primary">
-              Services
-            </Link>
-            <Link href="/about" className="text-lg font-medium hover:text-primary">
-              About
-            </Link>
-            <Link href="/contact" className="text-lg font-medium hover:text-primary">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="hidden md:flex">
-                Request Help
-              </Button>
-            </Link>
-            <Button variant="outline" size="icon" className="md:hidden">
-              <span className="sr-only">Toggle menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6">
@@ -216,21 +165,7 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t py-6 md:py-0">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <p className="text-center text-sm leading-loose text-gray-500 md:text-left">
-            © 2025 Tech Support Pal. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-sm text-gray-500 hover:text-gray-900">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-sm text-gray-500 hover:text-gray-900">
-              Terms of Service
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
