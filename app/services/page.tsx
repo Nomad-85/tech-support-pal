@@ -165,7 +165,7 @@ export default function ServicesPage() {
                 <Card key={index} className="flex flex-col h-full">
                   <CardHeader>
                     <Image
-                      src={service.image || "phone-transfer.png"}
+                      src="/phone-transfer.png"
                       alt={service.title}
                       width={300}
                       height={200}
