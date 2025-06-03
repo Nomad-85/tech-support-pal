@@ -94,7 +94,7 @@ export default function AboutPage() {
             <div className="mx-auto max-w-5xl py-12">
               <div className="flex flex-col items-center space-y-6 text-center">
                 <Image
-                  src="/placeholder.svg?height=250&width=250"
+                  src="/travis-roesner.png"
                   alt="Travis Roesner"
                   width={250}
                   height={250}
