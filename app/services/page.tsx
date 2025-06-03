@@ -50,7 +50,7 @@ export default function ServicesPage() {
       title: "Computer Support",
       description:
         "Get help with your Windows PC or Apple Mac computer. We can help with setup, updates, troubleshooting, and basic training to help you get the most out of your computer.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/computer-support.png",
       features: [
         "Computer setup and configuration",
         "Software updates and installation",
@@ -63,7 +63,7 @@ export default function ServicesPage() {
       title: "Streaming Device Setup",
       description:
         "We'll help you set up and use streaming devices like Apple TV, Roku, and Amazon Fire Stick. We can also help you understand how to access your favorite shows and movies.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/streaming-devices.png",
       features: [
         "Streaming device installation",
         "Account setup for streaming services",
@@ -76,7 +76,7 @@ export default function ServicesPage() {
       title: "Printer Assistance",
       description:
         "Get help setting up your printer, connecting it to your devices wirelessly, and troubleshooting any printing issues. We can also help with scanner setup and basic usage.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/printer.png",
       features: [
         "Printer setup and configuration",
         "Wireless printing setup",
