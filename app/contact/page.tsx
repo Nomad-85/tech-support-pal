@@ -184,14 +184,13 @@ export default function ContactPage() {
                         <div>
                           <h3 className="font-medium">Phone</h3>
                           <p className="text-sm text-gray-500">(510) 316-7632</p>
-                          <p className="text-sm text-gray-500">Monday - Friday, 9am - 7pm</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
                         <Mail className="h-5 w-5 text-primary mt-0.5" />
                         <div>
                           <h3 className="font-medium">Email</h3>
-                          <p className="text-sm text-gray-500">support@techsupportpal.com</p>
+                          <p className="text-sm text-gray-500">travisjamesroesner@gmail.com</p>
                           <p className="text-sm text-gray-500">We respond within 24 hours</p>
                         </div>
                       </div>
@@ -200,7 +199,7 @@ export default function ContactPage() {
                         <div>
                           <h3 className="font-medium">Service Area</h3>
                           <p className="text-sm text-gray-500">
-                            We serve the greater metropolitan area and surrounding suburbs.
+                            We serve the Naperville and Wheaton area and surrounding suburbs.
                           </p>
                         </div>
                       </div>
@@ -217,7 +216,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-medium">How much do your services cost?</h3>
                         <p className="text-sm text-gray-500 mt-1">
-                          Our standard rate is $100/hour with a one-hour minimum. Most common issues can be resolved in
+                          Our standard rate is $100/hour with a one-hour minimum. Additional time after the first hour is billed in 15 minute increments. Most common issues can be resolved in
                           1-2 hours.
                         </p>
                       </div>
