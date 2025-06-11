@@ -116,6 +116,7 @@ export default function ServicesPage() {
                       width={300}
                       height={250}
                       quality={100}
+                      sizes="(min-width: 1024px) 300px, 100vw"
                       className="w-full h-64 object-cover object-[center-top] rounded-t-lg"
                     />
                     <CardTitle className="text-xl">{service.title}</CardTitle>
