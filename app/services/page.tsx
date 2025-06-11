@@ -113,9 +113,11 @@ export default function ServicesPage() {
                     <Image
                       src={service.image}
                       alt={service.title}
-                      fill
+                      width={600} // use 2x if your layout shows it as 300px wide
+                      height={500} // 2x for 250px
                       quality={100}
                       sizes="(min-width: 1024px) 300px, 100vw"
+                      style={{ width: '100%', height: 'auto' }}
                       className="object-cover object-[center-top] rounded-t-lg"
                     />
                     <CardTitle className="text-xl">{service.title}</CardTitle>
