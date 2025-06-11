@@ -113,11 +113,10 @@ export default function ServicesPage() {
                     <Image
                       src={service.image}
                       alt={service.title}
-                      width={300}
-                      height={250}
+                      fill
                       quality={100}
                       sizes="(min-width: 1024px) 300px, 100vw"
-                      className="w-full h-64 object-cover object-[center-top] rounded-t-lg"
+                      className="object-cover object-[center-top] rounded-t-lg"
                     />
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <CardDescription>{service.description}</CardDescription>
