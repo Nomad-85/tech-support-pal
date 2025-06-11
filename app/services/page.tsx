@@ -64,7 +64,6 @@ export default function ServicesPage() {
       description:
         "We'll help you set up and use streaming devices like Apple TV, Roku, and Amazon Fire Stick. We can also help you understand how to access your favorite shows and movies.",
       image: "/streaming-devices.webp",
-      quality: 100,
       features: [
         "Streaming device installation",
         "Account setup for streaming services",
@@ -116,6 +115,7 @@ export default function ServicesPage() {
                       alt={service.title}
                       width={300}
                       height={250}
+                      quality={100}
                       className="w-full h-64 object-cover object-[center-top] rounded-t-lg"
                     />
                     <CardTitle className="text-xl">{service.title}</CardTitle>
