@@ -137,6 +137,24 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        <section className="w-full py-12 md:py-24 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-4">Beyond the Basics</h2>
+              <p className="text-gray-600 leading-relaxed">
+                These are just some of the services we offer, but our expertise extends far beyond this list. 
+                No tech support challenge is too big or too complex for us to handle. Whether you're facing 
+                a simple setup issue or a complex system-wide problem, we have the knowledge and experience 
+                to help you resolve it.
+              </p>
+              <p className="text-gray-600 mt-4">
+                Don't see what you need? Just let us know what you're dealing with, and we'll help you find 
+                the perfect solution. We're here to make technology work for you, no matter what.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="w-full py-12 md:py-24 bg-primary text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
