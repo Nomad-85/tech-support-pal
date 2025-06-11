@@ -63,7 +63,7 @@ export default function ServicesPage() {
       title: "Streaming Device Setup",
       description:
         "We'll help you set up and use streaming devices like Apple TV, Roku, and Amazon Fire Stick. We can also help you understand how to access your favorite shows and movies.",
-      image: "/streaming-devices.png",
+      image: "/streaming-devices.webp",
       features: [
         "Streaming device installation",
         "Account setup for streaming services",
