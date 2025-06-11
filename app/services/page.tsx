@@ -63,7 +63,6 @@ export default function ServicesPage() {
       title: "Streaming Device Setup",
       description:
         "We'll help you set up and use streaming devices like Apple TV, Roku, and Amazon Fire Stick. We can also help you understand how to access your favorite shows and movies.",
-      image: "/streaming-devices.webp",
       features: [
         "Streaming device installation",
         "Account setup for streaming services",
@@ -110,16 +109,7 @@ export default function ServicesPage() {
               {services.map((service, index) => (
                 <Card key={index} className="flex flex-col h-full">
                   <CardHeader>
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      width={600} // use 2x if your layout shows it as 300px wide
-                      height={500} // 2x for 250px
-                      quality={100}
-                      sizes="(min-width: 1024px) 300px, 100vw"
-                      style={{ width: '100%', height: '250px' }}
-                      className="object-cover object-[center-top] rounded-t-lg"
-                    />
+
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <CardDescription>{service.description}</CardDescription>
                   </CardHeader>
