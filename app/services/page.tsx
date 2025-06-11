@@ -117,7 +117,7 @@ export default function ServicesPage() {
                       height={500} // 2x for 250px
                       quality={100}
                       sizes="(min-width: 1024px) 300px, 100vw"
-                      style={{ width: '100%', height: 'auto' }}
+                      style={{ width: '100%', height: '250px' }}
                       className="object-cover object-[center-top] rounded-t-lg"
                     />
                     <CardTitle className="text-xl">{service.title}</CardTitle>
