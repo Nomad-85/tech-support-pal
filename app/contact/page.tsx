@@ -18,15 +18,34 @@ import { toast } from "@/components/ui/use-toast"
 export default function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // In a real implementation, this would send the form data to a server
-    // For now, we'll just show a success message
-    setFormSubmitted(true)
-    toast({
-      title: "Request Submitted",
-      description: "We'll contact you shortly to schedule your appointment.",
-    })
+    try {
+      const formData = new FormData(e.currentTarget)
+      const response = await fetch('https://formspree.io/f/meokkbll', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+
+      setFormSubmitted(true)
+      toast({
+        title: "Request Submitted",
+        description: "We'll contact you shortly to schedule your appointment.",
+      })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit form. Please try again.",
+        variant: "destructive",
+      })
+    }
   }
 
   return (
