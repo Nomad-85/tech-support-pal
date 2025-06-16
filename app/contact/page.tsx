@@ -18,34 +18,13 @@ import { toast } from "@/components/ui/use-toast"
 export default function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false)
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
-    try {
-      const formData = new FormData(e.currentTarget)
-      const response = await fetch('https://formspree.io/f/meokkbll', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to submit form')
-      }
-
-      setFormSubmitted(true)
-      toast({
-        title: "Request Submitted",
-        description: "We'll contact you shortly to schedule your appointment.",
-      })
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to submit form. Please try again.",
-        variant: "destructive",
-      })
-    }
+    setFormSubmitted(true)
+    toast({
+      title: "Request Submitted",
+      description: "We'll contact you shortly to schedule your appointment.",
+    })
   }
 
   return (
@@ -93,28 +72,59 @@ export default function ContactPage() {
                         </Button>
                       </div>
                     ) : (
-                      <form onSubmit={handleSubmit} className="space-y-6">
+                      <form
+                        action="https://formspree.io/f/meokkbll"
+                        method="POST"
+                        className="space-y-6"
+                      >
                         <div className="grid gap-4 sm:grid-cols-2">
                           <div className="space-y-2">
                             <Label htmlFor="first-name">First name</Label>
-                            <Input id="first-name" placeholder="John" required />
+                            <Input
+                              id="first-name"
+                              name="first-name"
+                              placeholder="John"
+                              required
+                            />
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor="last-name">Last name</Label>
-                            <Input id="last-name" placeholder="Smith" required />
+                            <Input
+                              id="last-name"
+                              name="last-name"
+                              placeholder="Smith"
+                              required
+                            />
                           </div>
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="email">Email</Label>
-                          <Input id="email" type="email" placeholder="john.smith@example.com" required />
+                          <Input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="john.smith@example.com"
+                            required
+                          />
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="phone">Phone</Label>
-                          <Input id="phone" type="tel" placeholder="(555) 123-4567" required />
+                          <Input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="(555) 123-4567"
+                            required
+                          />
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="address">Address</Label>
-                          <Input id="address" placeholder="123 Main St" required />
+                          <Input
+                            id="address"
+                            name="address"
+                            placeholder="123 Main St"
+                            required
+                          />
                         </div>
                         <div className="grid gap-4 sm:grid-cols-2">
                           <div className="space-y-2">
@@ -182,9 +192,7 @@ export default function ContactPage() {
                             </SelectContent>
                           </Select>
                         </div>
-                        <Button type="submit" className="w-full">
-                          Submit Request
-                        </Button>
+                        <Button type="submit">Submit Request</Button>
                       </form>
                     )}
                   </CardContent>
