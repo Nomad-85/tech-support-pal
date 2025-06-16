@@ -129,16 +129,26 @@ export default function ContactPage() {
                         <div className="grid gap-4 sm:grid-cols-2">
                           <div className="space-y-2">
                             <Label htmlFor="city">City</Label>
-                            <Input id="city" placeholder="Anytown" required />
+                            <Input
+                              id="city"
+                              name="city"
+                              placeholder="Anytown"
+                              required
+                            />
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor="zip">ZIP Code</Label>
-                            <Input id="zip" placeholder="12345" required />
+                            <Input
+                              id="zip"
+                              name="zip"
+                              placeholder="12345"
+                              required
+                            />
                           </div>
                         </div>
                         <div className="space-y-2">
-                          <Label>Preferred Contact Method</Label>
-                          <RadioGroup defaultValue="phone" className="flex flex-col space-y-1">
+                          <Label htmlFor="contact-method">Preferred Contact Method</Label>
+                          <RadioGroup name="contact-method" defaultValue="phone" className="flex flex-col space-y-1">
                             <div className="flex items-center space-x-2">
                               <RadioGroupItem id="contact-phone" value="phone" />
                               <Label htmlFor="contact-phone">Phone</Label>
@@ -151,7 +161,7 @@ export default function ContactPage() {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="service-type">Service Type</Label>
-                          <Select required>
+                          <Select name="service-type" required>
                             <SelectTrigger>
                               <SelectValue placeholder="Select a service" />
                             </SelectTrigger>
@@ -170,6 +180,7 @@ export default function ContactPage() {
                           <Label htmlFor="description">Describe Your Issue</Label>
                           <Textarea
                             id="description"
+                            name="description"
                             placeholder="Please provide details about your technology issue..."
                             className="min-h-[120px]"
                             required
@@ -177,11 +188,16 @@ export default function ContactPage() {
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="preferred-date">Preferred Date</Label>
-                          <Input id="preferred-date" type="date" required />
+                          <Input
+                            id="preferred-date"
+                            name="preferred-date"
+                            type="date"
+                            required
+                          />
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="preferred-time">Preferred Time</Label>
-                          <Select required>
+                          <Select name="preferred-time" required>
                             <SelectTrigger>
                               <SelectValue placeholder="Select a time" />
                             </SelectTrigger>
