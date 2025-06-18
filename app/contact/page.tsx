@@ -18,13 +18,39 @@ import { toast } from "@/components/ui/use-toast"
 export default function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setFormSubmitted(true)
-    toast({
-      title: "Request Submitted",
-      description: "We'll contact you shortly to schedule your appointment.",
-    })
+    
+    try {
+      const formData = new FormData(e.target)
+      const formObject = Object.fromEntries(formData)
+      
+      // Send data to Formspree
+      const response = await fetch('https://formspree.io/f/meokkbll', {
+        method: 'POST',
+        body: JSON.stringify(formObject),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+
+      // Show success message
+      setFormSubmitted(true)
+      toast({
+        title: "Request Submitted",
+        description: "We'll contact you shortly to schedule your appointment.",
+      })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit your request. Please try again.",
+        variant: "destructive",
+      })
+    }
   }
 
   return (
@@ -73,8 +99,7 @@ export default function ContactPage() {
                       </div>
                     ) : (
                       <form
-                        action="https://formspree.io/f/meokkbll"
-                        method="POST"
+                        onSubmit={handleSubmit}
                         className="space-y-6"
                       >
                         <div className="grid gap-4 sm:grid-cols-2">
