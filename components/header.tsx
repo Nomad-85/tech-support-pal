@@ -25,6 +25,7 @@ export function Header() {
         <nav className="hidden md:flex gap-6">
           <Link href="/" className="text-lg font-medium hover:text-primary">Home</Link>
           <Link href="/services" className="text-lg font-medium hover:text-primary">Services</Link>
+          <Link href="/help-center" className="text-lg font-medium hover:text-primary">Help Center</Link>
           <Link href="/about" className="text-lg font-medium hover:text-primary">About</Link>
           <Link href="/contact" className="text-lg font-medium hover:text-primary">Contact</Link>
         </nav>
@@ -80,6 +81,13 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Services
+            </Link>
+            <Link 
+              href="/help-center" 
+              className="text-lg font-medium hover:text-primary px-4 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Help Center
             </Link>
             <Link 
               href="/about" 
