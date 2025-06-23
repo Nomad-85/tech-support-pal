@@ -258,7 +258,7 @@ export default function ContactPage() {
                         <Mail className="h-5 w-5 text-primary mt-0.5" />
                         <div>
                           <h3 className="font-medium">Email</h3>
-                          <p className="text-sm text-gray-500">travisjamesroesner@gmail.com</p>
+                          <p className="text-sm text-gray-500">support@techsupportpal.com</p>
                           <p className="text-sm text-gray-500">We respond within 24 hours</p>
                         </div>
                       </div>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                         <div>
                           <h3 className="font-medium">Service Area</h3>
                           <p className="text-sm text-gray-500">
-                            We serve the Naperville and Wheaton area and surrounding suburbs.
+                            We serve the Naperville area and surrounding suburbs.
                           </p>
                         </div>
                       </div>
