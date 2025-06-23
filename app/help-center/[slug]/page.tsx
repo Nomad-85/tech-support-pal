@@ -2,7 +2,6 @@
 
 import { useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { ChevronLeft, Eye, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { articles } from "@/lib/articles"
@@ -52,17 +51,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                   </div>
                 </div>
               </div>
-              
-              {article.image && (
-                <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden">
-                  <Image 
-                    src={article.image} 
-                    alt={article.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              )}
               
               <div className="prose prose-lg max-w-none">
                 <div dangerouslySetInnerHTML={{ __html: article.content }} />

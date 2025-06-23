@@ -4,7 +4,7 @@ export interface Article {
   summary: string;
   content: string;
   date: string;
-  image?: string;
+
   views: number;
 }
 
@@ -45,7 +45,7 @@ export const articles: Article[] = [
       </ul>
     `,
     date: "2025-06-01",
-    image: "/images/wifi-connection.jpg",
+
     views: 245
   },
   {
@@ -86,7 +86,7 @@ export const articles: Article[] = [
       </ul>
     `,
     date: "2025-05-15",
-    image: "/images/email-setup.jpg",
+
     views: 189
   },
   {
@@ -128,7 +128,7 @@ export const articles: Article[] = [
       </ul>
     `,
     date: "2025-04-22",
-    image: "/images/photo-backup.jpg",
+
     views: 312
   }
 ];
