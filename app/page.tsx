@@ -184,7 +184,7 @@ export default function Home() {
             <div className="mx-auto flex flex-wrap justify-center items-center gap-8 py-12">
               <div className="flex flex-col items-center space-y-4">
                 <Image
-                  src="/IL-COC-logo-dark-800px.png"
+                  src="/IL-COC-logo-dark-800px.webp"
                   alt="Illinois Continuity of Care Association Logo"
                   width={300}
                   height={150}
