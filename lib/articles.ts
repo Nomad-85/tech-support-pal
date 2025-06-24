@@ -130,5 +130,97 @@ export const articles: Article[] = [
     date: "2025-04-22",
 
     views: 312
+  },
+  {
+    slug: "top-10-tech-tips-for-seniors",
+    title: "Top 10 Tech Tips for Seniors",
+    summary: "Essential technology tips to help seniors stay safe, organized, and confident using their devices.",
+    content: `
+      <h2>Top 10 Tech Tips for Seniors</h2>
+      <ol>
+        <li><strong>Use Your Browser's Saved Passwords:</strong> Modern browsers can securely remember your usernames and passwords, so you don't have to. Look for the option to save passwords when you log in to websites.</li>
+        <li><strong>Keep a Physical Password Notebook:</strong> Write down important passwords in a dedicated notebook and store it in a safe place. This is helpful if you ever forget a password or need to access your accounts on a new device.</li>
+        <li><strong>Use Google to Troubleshoot:</strong> If you encounter a tech problem, try searching for your issue on Google. Add your device type and a brief description of the problem to get relevant solutions.</li>
+        <li><strong>Install Software Updates:</strong> Regularly update your devices and apps to keep them secure and running smoothly.</li>
+        <li><strong>Beware of Scams:</strong> Never share personal information with strangers online or over the phone. Be cautious of emails or messages asking for sensitive details.</li>
+        <li><strong>Back Up Important Data:</strong> Use cloud services or external drives to back up your photos, documents, and contacts.</li>
+        <li><strong>Use Large Text and Display Settings:</strong> Adjust your device’s display settings to make text larger and easier to read.</li>
+        <li><strong>Set Up Emergency Contacts:</strong> Add emergency contacts to your phone for quick access if needed.</li>
+        <li><strong>Explore Accessibility Features:</strong> Many devices offer features like voice commands, magnifiers, and screen readers to make technology easier to use.</li>
+        <li><strong>Ask for Help:</strong> Don’t hesitate to reach out to friends, family, or tech support if you need assistance. There are also many community resources and classes for seniors.</li>
+      </ol>
+      <h3>Bonus Tip</h3>
+      <p>Take your time and explore new technology at your own pace. Practice makes perfect!</p>
+    `,
+    date: "2025-06-24",
+    views: 0
+  },
+  {
+    slug: "edit-home-screen-iphone-android",
+    title: "How to Edit the Home Screen on iPhone and Android",
+    summary: "Learn how to move apps and organize your home screen on iPhone and Android devices.",
+    content: `
+      <h2>How to Edit the Home Screen on iPhone and Android</h2>
+      <h3>On iPhone</h3>
+      <ol>
+        <li>Touch and hold any app icon on your home screen until all the apps start to jiggle.</li>
+        <li>Drag the app to a new location or onto another app to create a folder.</li>
+        <li>To remove an app from a folder, open the folder and drag the app out.</li>
+        <li>Tap the “Done” button (usually in the top right) or press the Home button to finish.</li>
+      </ol>
+      <h3>On Android</h3>
+      <ol>
+        <li>Touch and hold the app icon you want to move.</li>
+        <li>Drag the app to your desired location or onto another app to create a folder.</li>
+        <li>To rename a folder, tap on it and enter a new name.</li>
+        <li>To remove an app from a folder, open the folder and drag the app out.</li>
+        <li>Some Android phones may have slightly different steps, but the basics are similar.</li>
+      </ol>
+      <h3>Tips</h3>
+      <ul>
+        <li>Organize your most-used apps on the first page for easy access.</li>
+        <li>Group similar apps (like games or utilities) into folders to keep your screen tidy.</li>
+        <li>Remove unused apps to declutter your home screen.</li>
+      </ul>
+    `,
+    date: "2025-06-24",
+    views: 0
+  },
+  {
+    slug: "tips-for-using-photos-app-iphone-android",
+    title: "Tips for Using the Photos App on iPhone and Android",
+    summary: "Discover how to organize, find, and share your photos easily on both iPhone and Android devices.",
+    content: `
+      <h2>Tips for Using the Photos App on iPhone and Android</h2>
+      <h3>Organizing Your Photos</h3>
+      <ul>
+        <li>Create albums to group related photos together (e.g., vacations, family events).</li>
+        <li>On iPhone, tap “Albums” > “+” to add a new album. On Android, use the “Albums” or “Folders” tab.</li>
+        <li>Delete unwanted photos regularly to free up space.</li>
+      </ul>
+      <h3>Finding Photos Quickly</h3>
+      <ul>
+        <li>Use the search feature to find photos by date, location, or even objects and people (if enabled).</li>
+        <li>Mark favorite photos with a heart or star for quick access later.</li>
+      </ul>
+      <h3>Sharing Photos</h3>
+      <ul>
+        <li>Select one or more photos and tap the share icon to send them via text, email, or social media.</li>
+        <li>On iPhone, you can create shared albums to share with friends and family.</li>
+        <li>On Android, use Google Photos to create shared albums or links.</li>
+      </ul>
+      <h3>Backing Up Your Photos</h3>
+      <ul>
+        <li>Enable iCloud Photos (iPhone) or Google Photos backup (Android) to automatically save your photos to the cloud.</li>
+        <li>Check your backup settings regularly to ensure your photos are safe.</li>
+      </ul>
+      <h3>Editing Photos</h3>
+      <ul>
+        <li>Use built-in editing tools to crop, adjust lighting, or apply filters to your photos.</li>
+        <li>Experiment with different edits—your original photo is usually saved, so you can always revert back.</li>
+      </ul>
+    `,
+    date: "2025-06-24",
+    views: 0
   }
 ];
