@@ -171,6 +171,32 @@ export default function Home() {
           </div>
         </section> */}
 
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Partners & Affiliates</h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Proud to work with trusted organizations in our community.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto flex flex-wrap justify-center items-center gap-8 py-12">
+              <div className="flex flex-col items-center space-y-4">
+                <Image
+                  src="/IL-COC-logo-dark-800px.png"
+                  alt="Illinois Continuity of Care Association Logo"
+                  width={300}
+                  height={150}
+                  className="object-contain"
+                />
+                <p className="text-center text-gray-600 font-medium">Illinois Continuity of Care Association</p>
+              </div>
+              {/* Additional partner logos can be added here in the future */}
+            </div>
+          </div>
+        </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
