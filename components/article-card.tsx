@@ -16,7 +16,9 @@ export function ArticleCard({ article }: ArticleCardProps) {
       <CardContent className="flex-grow p-6">
         <div className="space-y-2">
           <h3 className="text-2xl font-bold leading-tight">
-            {article.title}
+            <Link href={`/help-center/${article.slug}`} className="hover:underline focus:underline">
+              {article.title}
+            </Link>
           </h3>
           <p className="text-gray-500 line-clamp-3">
             {article.summary}

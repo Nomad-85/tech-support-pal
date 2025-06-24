@@ -137,6 +137,7 @@ export const articles: Article[] = [
     summary: "Essential technology tips to help seniors stay safe, organized, and confident using their devices.",
     content: `
       <h2>Top 10 Tech Tips for Seniors</h2>
+
       <ol>
         <li><strong>Use Your Browser's Saved Passwords:</strong> Modern browsers can securely remember your usernames and passwords, so you don't have to. Look for the option to save passwords when you log in to websites.</li>
         <li><strong>Keep a Physical Password Notebook:</strong> Write down important passwords in a dedicated notebook and store it in a safe place. This is helpful if you ever forget a password or need to access your accounts on a new device.</li>
@@ -149,7 +150,9 @@ export const articles: Article[] = [
         <li><strong>Explore Accessibility Features:</strong> Many devices offer features like voice commands, magnifiers, and screen readers to make technology easier to use.</li>
         <li><strong>Ask for Help:</strong> Don’t hesitate to reach out to friends, family, or tech support if you need assistance. There are also many community resources and classes for seniors.</li>
       </ol>
+
       <h3>Bonus Tip</h3>
+
       <p>Take your time and explore new technology at your own pace. Practice makes perfect!</p>
     `,
     date: "2025-06-24",
@@ -161,14 +164,18 @@ export const articles: Article[] = [
     summary: "Learn how to move apps and organize your home screen on iPhone and Android devices.",
     content: `
       <h2>How to Edit the Home Screen on iPhone and Android</h2>
+
       <h3>On iPhone</h3>
+
       <ol>
         <li>Touch and hold any app icon on your home screen until all the apps start to jiggle.</li>
         <li>Drag the app to a new location or onto another app to create a folder.</li>
         <li>To remove an app from a folder, open the folder and drag the app out.</li>
         <li>Tap the “Done” button (usually in the top right) or press the Home button to finish.</li>
       </ol>
+
       <h3>On Android</h3>
+
       <ol>
         <li>Touch and hold the app icon you want to move.</li>
         <li>Drag the app to your desired location or onto another app to create a folder.</li>
@@ -176,7 +183,9 @@ export const articles: Article[] = [
         <li>To remove an app from a folder, open the folder and drag the app out.</li>
         <li>Some Android phones may have slightly different steps, but the basics are similar.</li>
       </ol>
+
       <h3>Tips</h3>
+
       <ul>
         <li>Organize your most-used apps on the first page for easy access.</li>
         <li>Group similar apps (like games or utilities) into folders to keep your screen tidy.</li>
@@ -192,29 +201,39 @@ export const articles: Article[] = [
     summary: "Discover how to organize, find, and share your photos easily on both iPhone and Android devices.",
     content: `
       <h2>Tips for Using the Photos App on iPhone and Android</h2>
+
       <h3>Organizing Your Photos</h3>
+
       <ul>
         <li>Create albums to group related photos together (e.g., vacations, family events).</li>
         <li>On iPhone, tap “Albums” > “+” to add a new album. On Android, use the “Albums” or “Folders” tab.</li>
         <li>Delete unwanted photos regularly to free up space.</li>
       </ul>
+
       <h3>Finding Photos Quickly</h3>
+
       <ul>
         <li>Use the search feature to find photos by date, location, or even objects and people (if enabled).</li>
         <li>Mark favorite photos with a heart or star for quick access later.</li>
       </ul>
+
       <h3>Sharing Photos</h3>
+
       <ul>
         <li>Select one or more photos and tap the share icon to send them via text, email, or social media.</li>
         <li>On iPhone, you can create shared albums to share with friends and family.</li>
         <li>On Android, use Google Photos to create shared albums or links.</li>
       </ul>
+
       <h3>Backing Up Your Photos</h3>
+
       <ul>
         <li>Enable iCloud Photos (iPhone) or Google Photos backup (Android) to automatically save your photos to the cloud.</li>
         <li>Check your backup settings regularly to ensure your photos are safe.</li>
       </ul>
+
       <h3>Editing Photos</h3>
+
       <ul>
         <li>Use built-in editing tools to crop, adjust lighting, or apply filters to your photos.</li>
         <li>Experiment with different edits—your original photo is usually saved, so you can always revert back.</li>
