@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { articles } from "@/lib/articles"
 import { incrementArticleViews } from "@/lib/article-utils"
 import { notFound } from "next/navigation"
+import "../article-content.css"
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = articles.find((article) => article.slug === params.slug)
@@ -52,7 +53,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 </div>
               </div>
               
-              <div className="prose prose-lg max-w-none">
+              <div className="article-content max-w-none">
                 <div dangerouslySetInnerHTML={{ __html: article.content }} />
               </div>
             </div>
