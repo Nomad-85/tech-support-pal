@@ -13,8 +13,8 @@ const nextConfig = {
     domains: [],
     // Set image formats in order of preference
     formats: ['image/webp', 'image/avif'],
-    // Note: Global quality setting is not supported in Next.js 15+
-    // Quality can be set per-image when using the Image component
+    // Set reasonable image quality (80% is a good balance)
+    quality: 80,
     // Set device sizes for responsive images
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     // Set image sizes for responsive images
