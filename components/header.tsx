@@ -10,9 +10,9 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full border-b bg-white" role="banner">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2" aria-label="Tech Support Pal Home">
           <Image
             src="/favicon.png"
             alt="Tech Support Pal Logo"
@@ -22,17 +22,18 @@ export function Header() {
           />
           <span className="text-xl font-bold">Tech Support Pal</span>
         </Link>
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-6" aria-label="Main navigation">
           <Link href="/" className="text-lg font-medium hover:text-primary">Home</Link>
           <Link href="/services" className="text-lg font-medium hover:text-primary">Services</Link>
           <Link href="/help-center" className="text-lg font-medium hover:text-primary">Help Center</Link>
           <Link href="/about" className="text-lg font-medium hover:text-primary">About</Link>
           <Link href="/contact" className="text-lg font-medium hover:text-primary">Contact</Link>
+          <Link href="/image-optimization" className="text-lg font-medium hover:text-primary">Images</Link>
         </nav>
         <div className="flex items-center gap-4">
           <Link href="/contact">
-            <Button size="lg" className="hidden md:flex">
-              <PhoneCall className="mr-2 h-4 w-4" />
+            <Button size="lg" className="hidden md:flex" aria-label="Request technical support">
+              <PhoneCall className="mr-2 h-4 w-4" aria-hidden="true" />
               Request Help
             </Button>
           </Link>
@@ -66,10 +67,11 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden">
-          <div className="container py-4 flex flex-col space-y-4 bg-white border-t">
+        <div className="md:hidden" role="navigation" aria-label="Mobile navigation">
+          <div className="container py-4 flex flex-col space-y-4 bg-white border-t" role="menu" aria-label="Mobile navigation links">
             <Link 
               href="/" 
+              role="menuitem"
               className="text-lg font-medium hover:text-primary px-4 py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -77,6 +79,7 @@ export function Header() {
             </Link>
             <Link 
               href="/services" 
+              role="menuitem"
               className="text-lg font-medium hover:text-primary px-4 py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -84,6 +87,7 @@ export function Header() {
             </Link>
             <Link 
               href="/help-center" 
+              role="menuitem"
               className="text-lg font-medium hover:text-primary px-4 py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -91,6 +95,7 @@ export function Header() {
             </Link>
             <Link 
               href="/about" 
+              role="menuitem"
               className="text-lg font-medium hover:text-primary px-4 py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -99,17 +104,27 @@ export function Header() {
             <Link 
               href="/contact" 
               className="text-lg font-medium hover:text-primary px-4 py-2"
+              role="menuitem"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
             </Link>
             <Link 
-              href="/contact" 
-              className="px-4 py-2"
+              href="/image-optimization" 
+              className="text-lg font-medium hover:text-primary px-4 py-2"
+              role="menuitem"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <Button size="lg" className="w-full">
-                <PhoneCall className="mr-2 h-4 w-4" />
+              Images
+            </Link>
+            <Link 
+              href="/contact" 
+              className="px-4 py-2"
+              role="menuitem"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Button size="lg" className="w-full" aria-label="Request technical support">
+                <PhoneCall className="mr-2 h-4 w-4" aria-hidden="true" />
                 Request Help
               </Button>
             </Link>

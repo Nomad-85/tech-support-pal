@@ -1,0 +1,83 @@
+/* Optimized Image Component Styles */
+
+.optimized-image-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 0; /* Remove extra space below images */
+}
+
+/* Loading state */
+.optimized-image-container.loading {
+  background-color: #f0f0f0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Loaded state */
+.optimized-image-container.loaded {
+  background-color: transparent;
+  animation: none;
+}
+
+/* Error state */
+.optimized-image-container.error {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+}
+
+/* Image visibility */
+.optimized-image {
+  transition: opacity 0.3s ease;
+}
+
+.optimized-image.invisible {
+  opacity: 0;
+}
+
+.optimized-image.visible {
+  opacity: 1;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    background-color: #f0f0f0;
+  }
+  50% {
+    background-color: #e0e0e0;
+  }
+  100% {
+    background-color: #f0f0f0;
+  }
+}
+
+/* Fallback styles */
+.image-error-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #666;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (prefers-reduced-motion: reduce) {
+  .optimized-image-container.loading {
+    animation: none;
+  }
+  
+  .optimized-image {
+    transition: none;
+  }
+}
+
+/* Accessibility focus styles */
+.optimized-image-container:focus-within {
+  outline: 2px solid #0070f3;
+  outline-offset: 2px;
+}

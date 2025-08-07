@@ -1,11 +1,51 @@
+import dynamic from "next/dynamic"
 import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle, ArrowRight, PhoneCall, Clock, CreditCard } from "lucide-react"
+import { PhoneCall, Clock, CreditCard } from "lucide-react"
+import type { Metadata } from 'next'
+import React from "react";
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import JsonLd, { createLocalBusinessSchema } from "@/components/json-ld"
+
+export const metadata: Metadata = {
+  title: "Tech Support Services - Tech Support Pal",
+  description: "Browse our range of in-home technology support services including phone setup, internet troubleshooting, computer support, TV setup, and more for seniors and non-technical users.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Tech Support Services - Tech Support Pal",
+    description: "Browse our range of in-home technology support services including phone setup, internet troubleshooting, computer support, TV setup, and more for seniors and non-technical users.",
+    url: "/services",
+    type: "website",
+    images: [
+      {
+        url: "/services-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tech Support Pal Services",
+      },
+    ],
+  },
+}
+
+// Dynamically import the ServicesGrid component with loading state
+const ServicesGrid = dynamic(() => import('@/components/services-grid'), {
+  loading: () => (
+    <div className="w-full py-12">
+      <div className="container px-4 md:px-6 flex justify-center items-center">
+        <div className="animate-pulse text-center">
+          <p className="text-lg">Loading services...</p>
+        </div>
+      </div>
+    </div>
+  ),
+  ssr: false
+})
 
 export default function ServicesPage() {
+  // Define services array for both UI rendering and structured data
   const services = [
     {
       title: "Phone Setup & Transfers",
@@ -86,14 +126,22 @@ export default function ServicesPage() {
     },
   ]
 
+
+
   return (
     <div>
+      {/* Add JSON-LD structured data */}
+      <JsonLd data={createLocalBusinessSchema()} />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        <section 
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50" 
+          role="region" 
+          aria-labelledby="services-heading"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h1>
+                <h1 id="services-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h1>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   We offer a wide range of technology support services to help everyone, regardless of their
                   technical experience.
@@ -103,44 +151,24 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24">
+        <section 
+          className="w-full py-12 md:py-24" 
+          role="region" 
+          aria-labelledby="services-heading"
+        >
           <div className="container px-4 md:px-6">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {services.map((service, index) => (
-                <Card key={index} className="flex flex-col h-full">
-                  <CardHeader>
-
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <ul className="space-y-2">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link href="/contact" className="w-full">
-                      <Button className="w-full">
-                        Request This Service
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
+            <ServicesGrid services={services} />
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 bg-gray-50">
+        <section 
+          className="w-full py-12 md:py-24 bg-gray-50" 
+          role="region" 
+          aria-labelledby="beyond-basics-heading"
+        >
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl font-bold mb-4">Beyond the Basics</h2>
+              <h2 id="beyond-basics-heading" className="text-2xl font-bold mb-4">Beyond the Basics</h2>
               <p className="text-gray-600 leading-relaxed">
                 These are just some of the services we offer, but our expertise extends far beyond this list. 
                 No tech support challenge is too big or too complex for us to handle. Whether you're facing 
@@ -155,16 +183,23 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 bg-primary text-white">
+        <section 
+          className="w-full py-12 md:py-24 bg-primary text-white" 
+          role="region" 
+          aria-labelledby="contact-cta-heading"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Need a Different Service?</h2>
+                <h2 id="contact-cta-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl">Need a Different Service?</h2>
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Don't see what you need? Contact us anyway! We're happy to discuss your specific technology needs.
                 </p>
               </div>
-              <Link href="/contact">
+              <Link 
+                href="/contact" 
+                aria-label="Contact us about custom technology support services"
+              >
                 <Button size="lg" variant="secondary" className="mt-4">
                   Contact Us
                 </Button>
