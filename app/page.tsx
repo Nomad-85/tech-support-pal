@@ -34,8 +34,7 @@ export default function Home() {
                   In-Home Technology Support for Seniors in Naperville & Wheaton
                 </h1>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Friendly, patient tech support in Naperville IL and Wheaton IL, right in the comfort of your home. 
-                  We specialize in making technology simple for seniors with clear, step-by-step guidance.
+                  Friendly, patient help in the comfort of your home. We make technology simple for seniors with clear, step-by-step guidance—Wi-Fi, printers, email, smartphones & more. Same-day visits available.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/contact">
@@ -73,50 +72,51 @@ export default function Home() {
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-lg">Common Emergencies We Fix</div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Fast Help When Technology Fails</h2>
+                <div className="text-sm font-medium text-blue-600">Fast help in Naperville & Wheaton</div>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We provide urgent tech support for these common problems in Naperville and Wheaton homes.                  
+                  We fix the most common tech problems seniors face—often on the same day you call.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="flex flex-col p-4 bg-white rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold mb-2">WiFi Down Help Naperville</h3>
-                <p className="text-gray-500 text-sm mb-3">Can't connect to WiFi? We'll get your internet working again quickly.</p>
+                <h3 className="text-lg font-bold mb-2">Wi-Fi Won't Connect</h3>
+                <p className="text-gray-500 text-sm mb-3">Can't connect to Wi-Fi? We'll get your internet working again quickly with same-day service.</p>
                 <Link href="/emergency" className="text-primary font-medium flex items-center mt-auto text-sm">
                   Get same-day help <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex flex-col p-4 bg-white rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold mb-2">Printer Offline Fix Naperville</h3>
-                <p className="text-gray-500 text-sm mb-3">Printer not working? We'll troubleshoot and fix connection issues.</p>
+                <h3 className="text-lg font-bold mb-2">Printer Offline or Not Printing</h3>
+                <p className="text-gray-500 text-sm mb-3">Printer not working? We'll troubleshoot and fix connection issues so you can print again.</p>
                 <Link href="/emergency" className="text-primary font-medium flex items-center mt-auto text-sm">
                   Get same-day help <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex flex-col p-4 bg-white rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold mb-2">Computer Running Slow Naperville</h3>
-                <p className="text-gray-500 text-sm mb-3">Sluggish computer? We'll speed it up and optimize performance.</p>
+                <h3 className="text-lg font-bold mb-2">Slow Computer Performance</h3>
+                <p className="text-gray-500 text-sm mb-3">Sluggish computer? We'll speed it up and optimize performance so you can work efficiently.</p>
                 <Link href="/emergency" className="text-primary font-medium flex items-center mt-auto text-sm">
                   Get same-day help <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex flex-col p-4 bg-white rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold mb-2">Virus Removal Near Wheaton IL</h3>
-                <p className="text-gray-500 text-sm mb-3">Virus or malware infection? We'll clean and secure your device.</p>
+                <h3 className="text-lg font-bold mb-2">Virus & Malware Removal</h3>
+                <p className="text-gray-500 text-sm mb-3">Virus or malware infection? We'll clean and secure your device to protect your personal information.</p>
                 <Link href="/emergency" className="text-primary font-medium flex items-center mt-auto text-sm">
                   Get same-day help <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex flex-col p-4 bg-white rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold mb-2">Password Recovery Service Naperville</h3>
-                <p className="text-gray-500 text-sm mb-3">Locked out of accounts? We'll help you regain access safely.</p>
+                <h3 className="text-lg font-bold mb-2">Password & Account Recovery</h3>
+                <p className="text-gray-500 text-sm mb-3">Locked out of accounts? We'll help you regain access safely and set up better password management.</p>
                 <Link href="/emergency" className="text-primary font-medium flex items-center mt-auto text-sm">
                   Get same-day help <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex flex-col p-4 bg-white rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold mb-2">Data Recovery Naperville IL</h3>
-                <p className="text-gray-500 text-sm mb-3">Lost important files? We can help recover your valuable data.</p>
+                <h3 className="text-lg font-bold mb-2">Data Recovery & Backup</h3>
+                <p className="text-gray-500 text-sm mb-3">Lost important files? We can help recover your valuable data and set up automatic backups.</p>
                 <Link href="/emergency" className="text-primary font-medium flex items-center mt-auto text-sm">
                   Get same-day help <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
