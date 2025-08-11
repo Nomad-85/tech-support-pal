@@ -1,8 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
 import { PhoneCall, Clock, CreditCard, CheckCircle } from "lucide-react"
+import { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
+import { generateCanonicalUrl } from "@/lib/canonical"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: generateCanonicalUrl("/"),
+  }
+}
 
 
 export default function Home() {

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Allow all crawlers
+Sitemap: https://techsupportpal.com/sitemap.xml
+
+# Disallow specific paths if needed
+# Disallow: /api/
+# Disallow: /admin/

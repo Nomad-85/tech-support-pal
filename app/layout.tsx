@@ -10,9 +10,34 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Tech Support Pal - In-Home Technology Support",
-  description:
-    "Professional and friendly in-home technology support services for everyone, regardless of technical experience.",
-    generator: 'v0.dev'
+  description: "Professional and friendly in-home technology support services for everyone, regardless of technical experience.",
+  generator: 'v0.dev',
+  keywords: "tech support, in-home support, computer help, technology assistance, IT services, computer repair",
+  authors: [{ name: "Tech Support Pal" }],
+  openGraph: {
+    title: "Tech Support Pal - In-Home Technology Support",
+    description: "Professional and friendly in-home technology support services for everyone, regardless of technical experience.",
+    url: "https://techsupportpal.com",
+    siteName: "Tech Support Pal",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Tech Support Pal Logo"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tech Support Pal - In-Home Technology Support",
+    description: "Professional and friendly in-home technology support services for everyone, regardless of technical experience.",
+    images: ["/logo.png"]
+  },
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow"
 }
 
 export default function RootLayout({ children }) {

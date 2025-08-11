@@ -1,8 +1,18 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock, MapPin } from "lucide-react"
+import { Metadata } from "next"
 
 import { Button } from "@/components/ui/button"
+import { generateCanonicalUrl } from "@/lib/canonical"
+
+export const metadata: Metadata = {
+  title: "About Tech Support Pal - Our Mission & Team",
+  description: "Learn about Tech Support Pal's mission to make technology accessible for everyone through patient, in-home technology support services.",
+  alternates: {
+    canonical: generateCanonicalUrl("/about"),
+  }
+}
 
 
 export default function AboutPage() {
