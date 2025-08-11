@@ -1,9 +1,25 @@
 import Link from "next/link"
 import Image from "next/image"
 import { CheckCircle, ArrowRight, PhoneCall, Clock, CreditCard } from "lucide-react"
+import { Metadata } from "next"
+import Script from "next/script"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { generateSeoMetadata, generateServiceSchema } from "@/lib/seo"
+
+export const metadata: Metadata = generateSeoMetadata({
+  title: "Computer, Wi-Fi, TV & Printer Help | In-Home Tech Support",
+  description: "Patient, in-home tech support for seniors in Naperville & Wheaton. Same-day help for Wi-Fi, printers, computers & phones. Call or book online.",
+  path: "/services",
+  keywords: [
+    "in-home tech support Naperville",
+    "wifi network setup Naperville home",
+    "smart TV installation Naperville",
+    "printer setup for seniors",
+    "computer help Wheaton seniors"
+  ]
+})
 
 export default function ServicesPage() {
   const services = [
@@ -93,10 +109,9 @@ export default function ServicesPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Services</h1>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our In-Home Tech Services for Naperville & Wheaton</h1>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a wide range of technology support services to help everyone, regardless of their
-                  technical experience.
+                  We offer friendly, patient technology support services in the comfort of your home in Naperville, Wheaton, and surrounding areas. Our services are designed with seniors in mind, making technology simple for everyone.
                 </p>
               </div>
             </div>
@@ -123,6 +138,14 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                   </CardContent>
+                  <p className="text-sm text-gray-500 mt-4 italic">
+                    {service.title.includes("Phone") && "Fast, friendly smartphone setup for seniors in Naperville & Wheaton homes."}                    
+                    {service.title.includes("Internet") && "Expert Wi-Fi network setup in Naperville homes with patient, clear instructions."}                    
+                    {service.title.includes("TV") && "Professional smart TV installation in Naperville with senior-friendly tutorials."}                    
+                    {service.title.includes("Computer") && "Reliable computer support for seniors in Wheaton with same-day availability."}                    
+                    {service.title.includes("Streaming") && "Easy streaming device setup for Wheaton seniors with step-by-step guidance."}                    
+                    {service.title.includes("Printer") && "Printer setup for seniors in Naperville & Wheaton with ongoing support."}                    
+                  </p>
                   <CardFooter>
                     <Link href="/contact" className="w-full">
                       <Button className="w-full">
@@ -161,18 +184,34 @@ export default function ServicesPage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Need a Different Service?</h2>
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Don't see what you need? Contact us anyway! We're happy to discuss your specific technology needs.
+                  Don't see what you need? Contact us anyway! We're happy to discuss your specific technology needs in Naperville, Wheaton, and throughout DuPage County.
                 </p>
               </div>
-              <Link href="/contact">
-                <Button size="lg" variant="secondary" className="mt-4">
-                  Contact Us
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                <Link href="/contact">
+                  <Button size="lg" variant="secondary">
+                    Contact Us
+                  </Button>
+                </Link>
+                <Link href="/emergency">
+                  <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100">
+                    Same-Day Tech Help
+                  </Button>
+                </Link>
+              </div>
+              <div className="mt-8 text-sm">
+                <p>Proudly serving: <Link href="/naperville" className="underline hover:text-gray-200">Naperville</Link> & <Link href="/wheaton" className="underline hover:text-gray-200">Wheaton</Link> seniors</p>
+              </div>
             </div>
           </div>
         </section>
       </main>
+      <Script id="service-schema" type="application/ld+json">
+        {generateServiceSchema(
+          "In-Home Tech Support", 
+          "Professional and friendly in-home technology support services for seniors in Naperville and Wheaton, IL."
+        )}
+      </Script>
     </div>
   )
 }
