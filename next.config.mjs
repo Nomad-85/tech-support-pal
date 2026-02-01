@@ -9,6 +9,25 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async headers() {
+    const isMaintenanceMode = process.env.MAINTENANCE_MODE === "true"
+    
+    if (isMaintenanceMode) {
+      return [
+        {
+          source: '/(.*)',
+          headers: [
+            {
+              key: 'X-Robots-Tag',
+              value: 'noindex, nofollow',
+            },
+          ],
+        },
+      ]
+    }
+    
+    return []
+  },
 }
 
 export default nextConfig
