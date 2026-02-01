@@ -5,17 +5,21 @@ export function middleware(request: NextRequest) {
   const isMaintenanceMode = process.env.MAINTENANCE_MODE === "true"
   
   if (isMaintenanceMode) {
-    // Redirect all non-root paths to root with 307 (temporary) redirect
-    if (request.nextUrl.pathname !== '/') {
-      const url = request.nextUrl.clone()
-      url.pathname = '/'
-      return NextResponse.redirect(url, 307)
-    }
-    
-    // For root path, add X-Robots-Tag header and continue
+    // Add X-Robots-Tag header for all requests during maintenance
     const response = NextResponse.next()
     response.headers.set('X-Robots-Tag', 'noindex, nofollow')
-    return response
+    
+    // For root path, rewrite to maintenance page component
+    if (request.nextUrl.pathname === '/') {
+      const url = request.nextUrl.clone()
+      url.pathname = '/maintenance'
+      return NextResponse.rewrite(url)
+    }
+    
+    // Redirect all other paths to root with 307 (temporary) redirect
+    const url = request.nextUrl.clone()
+    url.pathname = '/'
+    return NextResponse.redirect(url, 307)
   }
   
   return NextResponse.next()
