@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
     // For root path, rewrite to maintenance page component
     if (request.nextUrl.pathname === '/') {
       const url = request.nextUrl.clone()
-      url.pathname = '/maintenance-page'
+      url.pathname = '/maintenance'
       return NextResponse.rewrite(url)
     }
     

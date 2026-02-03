@@ -8,7 +8,14 @@ import { CtaBanner } from "@/components/cta-banner"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
+const isMaintenanceMode = process.env.MAINTENANCE_MODE === "true"
+
+export const metadata = isMaintenanceMode ? {
+  title: "Temporarily Unavailable - Tech Support Pal",
+  description: "Tech Support Pal is temporarily unavailable. We are not currently accepting new appointments or service requests.",
+  robots: "noindex, nofollow",
+  viewport: "width=device-width, initial-scale=1"
+} : {
   title: "Tech Support Pal - In-Home Technology Support",
   description: "Professional and friendly in-home technology support services for everyone, regardless of technical experience.",
   generator: 'v0.dev',
@@ -41,6 +48,24 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  if (isMaintenanceMode) {
+    return (
+      <html lang="en">
+        <head>
+          <meta name="robots" content="noindex, nofollow" />
+          <meta name="google-site-verification" content="egrlTHqbay4Z9FUpd_LMM-IGa7Vo6FzDawrTlnhWlDs" />
+          <link rel="icon" href="/favicon.png" type="image/png" />
+        </head>
+        <body className={inter.className}>
+          <ThemeProvider attribute="class" defaultTheme="light">
+            {children}
+            <Toaster />
+          </ThemeProvider>
+        </body>
+      </html>
+    )
+  }
+
   return (
     <html lang="en">
       <head>
